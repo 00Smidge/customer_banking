@@ -2,42 +2,33 @@
 
 class Account:
   """Creating an Account class with methods"""
-  def __init__(self, balance, interest, maturity, account_type): 
-    self.balance = balance
-    self.interest = interest
-    self.maturity = maturity
-    self.account_type = account_type
+  def __init__(self, balance, interest_rate, maturity): 
+    self._balance = balance
+    self._interest_rate = interest_rate
+    self._maturity = maturity
 
   @property
   def balance(self):
-    return  self.balance
+    return  self._balance
   
   @property
-  def interest(self):
-    return  self.interest
+  def interest_rate(self):
+    return  self._interest_rate
   
   @property
   def maturity(self):
-    return  self.maturity
-  
-  @property
-  def account_type(self):
-    return  self.account_type
+    return  self._maturity
 
   @balance.setter
   def balance(self, balance):
-    self.balance = balance
+    self._balance = balance
   
-  @interest.setter
-  def interest(self, interest):
-    self.interest = interest
+  @interest_rate.setter
+  def interest_rate(self, interest_rate):
+    self._interest_rate = interest_rate
   
   @maturity.setter
   def maturity(self, maturity):
-    self.maturity = maturity
-  
-  @account_type.setter
-  def account_type(self, account_type):
-    self.account_type = account_type
+    self._maturity = maturity
 
   

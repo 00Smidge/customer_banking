@@ -8,20 +8,36 @@ class Account:
     self.maturity = maturity
     self.account_type = account_type
 
-  # This method sets the balance of the account.
-  def set_balance(self, balance):
-    """Sets the balance for the for the account"""
+  @property
+  def balance(self):
+    return  self.balance
+  
+  @property
+  def interest(self):
+    return  self.interest
+  
+  @property
+  def maturity(self):
+    return  self.maturity
+  
+  @property
+  def account_type(self):
+    return  self.account_type
+
+  @balance.setter
+  def balance(self, balance):
     self.balance = balance
-
-  # The method sets the interest gained for the account.
-  def set_interest(self, interest):
-    """Sets the interest gained for the the account"""
+  
+  @interest.setter
+  def interest(self, interest):
     self.interest = interest
-
-  def set_account_type(self, account_type):
-    """Sets the account type the users is currently using"""
+  
+  @maturity.setter
+  def maturity(self, maturity):
+    self.maturity = maturity
+  
+  @account_type.setter
+  def account_type(self, account_type):
     self.account_type = account_type
 
-  def set_maturity(self, maturity):
-    """Sets the maturity rate for the account"""
-    self.maturity = maturity
+  

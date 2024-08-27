@@ -22,7 +22,7 @@ def create_cd_account(balance, interest_rate, months):
     # Calculate interest earned
     # ADD YOUR CODE HERE
     interest_earned = user_cd.balance * user_cd.interest_rate
-    print(f'Your interest rate of {user_cd.interest_rate} will earn ${interest_earned} on a current balance of ${user_cd.balance}')
+    print(f'Your interest rate of {user_cd.interest_rate:.2f} will earn ${interest_earned:.2f} on a current balance of ${user_cd.balance:.2f}\n')
     
     # Update the savings account balance by adding the interest earned
     # ADD YOUR CODE HERE
@@ -34,10 +34,8 @@ def create_cd_account(balance, interest_rate, months):
 
     # Pass the interest_earned to the set interest method using the instance of the SavingsAccount class.
     # ADD YOUR CODE HERE
-    user_cd.interest = interest_earned
+    user_cd.interest_rate = interest_earned
 
     # Return the updated balance and interest earned.
-    print(f'After generating ${interest_earned} off interest your new balance is ${updated_balance}')
-
     # ADD YOUR CODE HERE
-    return user_cd
+    return interest_rate, updated_balance
